@@ -1,0 +1,143 @@
+body {
+    background-color: #FAECD6;
+    cursor: default;
+    margin: 0;
+}
+
+h1, p, .card__button {
+    margin: 15px 20px 10px 20px;
+}
+
+h1 {
+    line-height: 30px;
+    font-family: 'Fraunces', serif;
+}
+
+p {
+    color: #8B7E74;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+.card {
+    background-color: white;
+    text-align: left;
+    display: flex;
+    width: 500px;
+    height: 370px;
+    border-radius: 10px;
+    margin: 8% auto 8%;
+}
+
+.card__image, .card__description {
+    width: 250px;
+}
+
+.card__image {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: 250px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card__actualPrice {
+    color: #42855B;
+    font-weight: bold;
+    font-size: 32px;
+    margin: 20px 10px 0 0;
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+}
+
+.card__oldPrice {
+    text-decoration: line-through;
+    position: relative;
+    bottom: 5px;
+}
+
+.card__button {
+    border: none;
+    border-radius: 10px;
+    background-color: #42855B;
+    color: white;
+    width: 200px;
+    padding: 15px;
+}
+
+.card__button::before {
+    content: url(images/icon-cart.svg);
+    position: relative;
+    top: 3px;
+    padding-right: 8px;
+}
+
+.card__button:hover {
+    background-color: #285430;
+    cursor: pointer;
+}
+
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: #42855B;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #7FB77E;
+}
+
+@media (max-width: 600px) {
+
+    .card, .card__image, .card__description {
+        width: 370px;
+    }
+
+    .card {
+        height: 460px;
+        margin: 5% auto 5%;
+    }
+
+    .card__image {
+        height: 150px;
+        background-position-y: -140px;
+        background-size: cover;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+
+    .card__description {
+        position: absolute;
+        bottom: 130px;
+    }
+
+    .card__actualPrice {
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+    }
+    
+    .card__oldPrice {
+        position: absolute;
+        bottom: 50px;
+        left: 160px;
+    }
+
+    .card__button {
+        width: 330px;
+        position: relative;
+        top: 40px;
+    }
+
+
+}
